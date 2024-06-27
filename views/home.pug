@@ -48,17 +48,21 @@ html
         table
           thead
             tr
+              th Car Name
               th Car Year
               th Car Model
               th Car VIN
-              th Car Condition
+              th Car Make
+              
           tbody
             each car in cars
               tr
+                td= car.properties.name
                 td= car.properties.year
                 td= car.properties.model
                 td= car.properties.vin
-                td= car.properties.condition
+                td= car.properties.make
+                
       else
         p No cars found.
       a(href="/update-cars") Add New Car
